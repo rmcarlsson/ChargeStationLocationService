@@ -1,4 +1,4 @@
-package domain;
+package csdomain;
 
 import java.util.Collection;
 
@@ -14,11 +14,12 @@ public class Charger {
 
 	@Id
 	@GeneratedValue
+	private Long id;
 	
 	@ManyToOne
 	private ChargeStation chargeStation;
 	
-	@ManyToMany(targetEntity=domain.ChargerType.class) // Owning side
+	@ManyToMany(targetEntity=csdomain.ChargerType.class) // Owning side
 	private Collection<ChargerType> chargerTypes;
 	
 	public Collection<ChargerType> getChargerTypes() {
@@ -33,4 +34,7 @@ public class Charger {
 	{
 		chargerTypes = chargerTypesList;
 	}
+	
+	
+	
 }

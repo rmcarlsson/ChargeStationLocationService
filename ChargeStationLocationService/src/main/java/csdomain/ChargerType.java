@@ -1,4 +1,4 @@
-package domain;
+package csdomain;
 
 import java.util.Collection;
 
@@ -18,14 +18,14 @@ public class ChargerType {
 	
 	
 	@ManyToMany(mappedBy="chargerTypes") // non-owning side
-	private Collection <ChargeStation> chargeStations; 
+	private Collection <Charger> chargers; 
 	
-	public Collection<ChargeStation> getChargeStations() {
-		return chargeStations;
+	public Collection<Charger> getChargers() {
+		return chargers;
 	}
 
-	public void setChargeStations(Collection<ChargeStation> chargeStations) {
-		this.chargeStations = chargeStations;
+	public void setChargeStations(Collection<Charger> chargers) {
+		this.chargers = chargers;
 	}
 
 	public ChargerType(String aName)

@@ -1,4 +1,4 @@
-package domain;
+package csdomain;
 
 
 import java.util.Collection;
