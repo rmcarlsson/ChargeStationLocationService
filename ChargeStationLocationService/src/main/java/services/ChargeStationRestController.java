@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import csdomain.Supplier;
+import csrepositories.ChargeStationRepository;
+import csrepositories.ChargerRepository;
+import csrepositories.ChargerTypeRepository;
 import csrepositories.SupplierRepository;
 
 
@@ -16,22 +19,22 @@ import csrepositories.SupplierRepository;
 @RequestMapping("/{userId}/chargestations")
 public class ChargeStationRestController {
 
-/*	@Autowired
+	@Autowired
 	private final ChargeStationRepository chargeStationRepository;
 	@Autowired
 	private final ChargerRepository chargerRepository;
 	@Autowired
-	private final ChargerTypeRepository chargerTypeRepository;*/
+	private final ChargerTypeRepository chargerTypeRepository;
 	@Autowired
 	private final SupplierRepository supplierRepository;
 
-	public ChargeStationRestController(/*ChargeStationRepository chargeStationRepository, 
+	public ChargeStationRestController(ChargeStationRepository chargeStationRepository, 
 			ChargerRepository chargerRepository,
-			ChargerTypeRepository chargerTypeRepository,*/
+			ChargerTypeRepository chargerTypeRepository,
 			SupplierRepository supplierRepository) {
-		/*this.chargeStationRepository = chargeStationRepository;
+		this.chargeStationRepository = chargeStationRepository;
 		this.chargerRepository = chargerRepository;
-		this.chargerTypeRepository = chargerTypeRepository;*/
+		this.chargerTypeRepository = chargerTypeRepository;
 		this.supplierRepository = supplierRepository;
 
 	}
